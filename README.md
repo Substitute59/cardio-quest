@@ -1,2 +1,3 @@
-# cardio-quest
-Road to triathlon
+# Triathlon RPG Starter
+
+Instructions inside.
