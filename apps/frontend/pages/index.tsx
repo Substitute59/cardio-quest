@@ -50,7 +50,6 @@ export default function Home() {
         <button type="submit" className="bg-blue-500 text-white p-2 rounded">Envoyer</button>
       </form>
       {result && <pre className="mt-4">{JSON.stringify(result, null, 2)}</pre>}
-      <h2 className="text-xl font-bold mt-8 mb-2">Activités enregistrées</h2>
       <ul>
         {activities.map((activity, idx) => (
           <li key={idx} className="mb-1">

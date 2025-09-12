@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { Module, Controller, Post, Body, Get } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
-import { computeXP } from '@triathlon-rpg/utils';
+import { computeXP } from './utils';
 
 const prisma = new PrismaClient();
 
@@ -30,6 +30,6 @@ class AppModule {}
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors();
-  await app.listen(3001);
+  await app.listen(3001, "0.0.0.0");
 }
 bootstrap();

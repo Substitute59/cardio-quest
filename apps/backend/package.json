@@ -2,9 +2,10 @@
   "name": "backend",
   "version": "0.0.1",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/main.ts",
+    "dev": "nest start --watch",
     "build": "tsc -p tsconfig.build.json",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "prisma:generate": "prisma generate --schema=./prisma/schema.prisma"
   },
   "dependencies": {
     "@nestjs/common": "^11.1.6",
@@ -25,6 +26,7 @@
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "eslint": "^9.35.0",
-    "@types/node": "^24.3.1"
+    "@types/node": "^24.3.1",
+    "prisma": "^6.16.1"
   }
 }

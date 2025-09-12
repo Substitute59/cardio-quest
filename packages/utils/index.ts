@@ -1,1 +1,0 @@
-export function computeXP(activity: { duration: number; sport: string }): number { const base = activity.duration; const sportMultiplier: Record<string, number> = { run: 1, bike: 0.9, swim: 1.2 }; return Math.round(base * (sportMultiplier[activity.sport] ?? 1)); }

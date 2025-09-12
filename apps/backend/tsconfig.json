@@ -16,6 +16,11 @@
     "incremental": true,
     "strict": true
   },
+  "watchOptions": {
+    "watchFile": "fixedPollingInterval",
+    "watchDirectory": "fixedPollingInterval",
+    "fallbackPolling": "fixedInterval"
+  },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
