@@ -5,10 +5,11 @@ export default function Home() {
   const [sport, setSport] = useState('');
   const [result, setResult] = useState<any>(null);
   const [activities, setActivities] = useState<any[]>([]);
+  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:3001/activities', {
+    const res = await fetch(backendUrl + '/activities', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ duration: Number(duration), sport }),
@@ -19,7 +20,7 @@ export default function Home() {
   };
 
   const fetchActivities = async () => {
-    const res = await fetch('http://localhost:3001/activities');
+    const res = await fetch(backendUrl + '/activities');
     const data = await res.json();
     setActivities(data);
   };
