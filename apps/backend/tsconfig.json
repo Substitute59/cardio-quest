@@ -10,9 +10,6 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": ".",
-    "paths": {
-      "@triathlon-rpg/utils": ["../../packages/utils"]
-    },
     "incremental": true,
     "strict": true
   },
