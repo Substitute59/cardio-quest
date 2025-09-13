@@ -1,3 +1,5 @@
-# Triathlon RPG Starter
+# Cario quest
 
-Instructions inside.
+Frontend deployed on Vercel: https://cardio-quest-frontend.vercel.app/
+
+Backend deployed on Render: https://cardio-quest-backend.onrender.com/
