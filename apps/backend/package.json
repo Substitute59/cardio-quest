@@ -5,6 +5,7 @@
     "dev": "nest start --watch",
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint . --ext .ts",
+    "start:prod": "node dist/main.js",
     "prisma:generate": "prisma generate --schema=./prisma/schema.prisma"
   },
   "dependencies": {

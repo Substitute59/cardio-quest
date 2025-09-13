@@ -22,14 +22,23 @@ class ActivityController {
   }
 }
 
+@Controller('tests')
+class TestController {
+  @Get()
+  async getTests() {
+    const tests = await prisma.test.findMany();
+    return tests;
+  }
+}
+
 @Module({
-  controllers: [ActivityController],
+  controllers: [ActivityController, TestController],
 })
 class AppModule {}
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors();
-  await app.listen(3001, "0.0.0.0");
+  await app.listen(process.env.PORT || 3001, "0.0.0.0");
 }
 bootstrap();

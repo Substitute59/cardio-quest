@@ -14,3 +14,9 @@ model Activity {
   xp        Int
   createdAt DateTime @default(now())
 }
+
+model Test {
+  id        Int      @id @default(autoincrement())
+  content   String
+  createdAt DateTime @default(now())
+}
